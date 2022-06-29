@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Private Field</title>
+</head>
+
+<body>
+  <h1>Pengenalan Class Private</h1>
+</body>
+<script>
+  class Car {
+    constructor(brand, color) {
+      console.info(`Merk mobil ${brand} berwarna, ${color}`)
+    }
+    #start() {
+      console.info("Jalankan Mobil")
+    }
+    changeGear() {
+      this.#start()
+      console.info("Ganti persneling")
+    }
+  }
+  const agya = new Car("Toyota", "Merah")
+  console.info(agya)
+  console.info(agya.changeGear())
+</script>
+
+</html>

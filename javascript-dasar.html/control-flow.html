@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Control Flow</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  const nilaiUjian = 75
+  const pujian = nilaiUjian >= 80 ? "Hebat Sekali" : "Anda Lulus"
+
+  console.log(pujian) // Anda Lulus 
+
+
+  const mahasiswa = {
+    nama: 'budi',
+    umur: 23,
+  };
+
+  const nilaiMahasiswa = mahasiswa.nilai ?? 0;
+
+  console.log(nilaiMahasiswa); // 0
+  const pet = "dog";
+
+  switch (pet) {
+    case "lizard":
+      console.log("I own a lizard");
+      break;
+    case "dog":
+      console.log("I own a dog");
+      break;
+    case "cat":
+      console.log("I own a cat");
+      break;
+    case "snake":
+      console.log("I own a snake");
+      break;
+    case "parrot":
+      console.log("I own a parrot");
+      break;
+    default:
+      console.log("I don't own a pet");
+      break;
+  }
+
+  if (nilaiUjian > 90) {
+    console.log("Super Hebat!")
+  } else if (nilaiUjian > 60) {
+    console.log("Anda Lulus")
+  } else {
+    console.log("Coba lagi tahun depan")
+  }
+
+
+  // Nullish Coalescing 
+  let result = undefined ?? "Hello";
+  console.log(result); // Hello
+
+  result = null ?? true;
+  console.log(result); // true
+
+  result = false ?? true;
+  console.log(result); // false
+
+
+
+  // Optional Chaining
+  const cpu = {
+    name: "AMD Ryzen 3700X",
+    price: {
+      base: 4950000,
+      discount: {
+        rate: 0.1,
+        maxAmount: 0
+      }
+    }
+  };
+
+  // alih-alih menulis seperti ini
+  (typeof cpu !== 'undefined' && cpu !== null) && cpu.price;
+
+  // kita bisa menuliskannya lebih pendek seperti ini!
+  console.info(cpu?.price);
+
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Class Selector</title>
+</head>
+
+<body>
+  <ul>
+    <li class="menuItem">First</li>
+    <li>Second</li>
+    <li class="menuItem">Third</li>
+  </ul>
+
+  <script>
+
+    const menuItem = document.querySelector(".menuItem");
+    const menuItems = document.querySelectorAll(".menuItem");
+
+    // elemen li.menuItem First
+    console.info(menuItem);
+
+    // array yang berisi semua elemen yang mempunyai class menuItem
+    console.info(menuItems);
+
+  </script>
+
+</body>
+
+</html>
