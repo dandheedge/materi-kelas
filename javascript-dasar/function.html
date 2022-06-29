@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Function</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // Membuat function
+  function helloWorld() {
+    document.writeln("Hello World")
+  }
+
+  // Memanggil function
+  helloWorld()
+
+  // Anonymous function
+  var helloWorld = function () {
+    console.log("Hello World!");
+  }
+
+  var namaFungsi = () => console.log("Hello World!");
+
+  var namaFungsi = new Function('console.log("Hello World!");');
+
+  function penjumlahan(a, b) {
+    console.log(a + b)
+  }
+
+  penjumlahan(2, 3) // 5
+  penjumlahan(4, 4) // 8
+
+  const perkalian = (...nums) => {
+    let total = 0;
+    for (let num of nums) {
+      console.log(num)
+      total *= num;
+    }
+    return total;
+  };
+  perkalian(4, 2, 3);
+  const result = perkalian(1, 2, 3);
+  console.log(result); // 6
+
+
+  function mobil(merk) {
+    var tahun = "2002";
+    function tipeMobil(type) {
+      return merk + " " + type + " " + tahun;
+    }
+    return tipeMobil
+  }
+  var sedan = mobil("Honda");
+  console.log(sedan("Civic")) // Honda Civic 2000
+</script>
+
+</html>
