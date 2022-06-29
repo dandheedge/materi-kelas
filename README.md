@@ -1,4 +1,4 @@
-*** Kelas.com Javascript Dasar
+## Kelas.com Javascript Dasar
 
 Materi pelajaran Javascript dasar untuk Kelas.com
 
